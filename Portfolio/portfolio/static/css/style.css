@@ -234,11 +234,7 @@ h4 {
     flex-wrap: wrap;
 }
 
-
-
-
 .projects-item {
-    overflow: hidden;
     width: 20rem;
     height: 20rem;
     margin: 1rem;
@@ -246,6 +242,35 @@ h4 {
     border-radius: 1.5rem;
     padding: 2rem 1rem;
     text-align: center;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.projects-item:hover {
+    background: #da7fa8;
+    transform: translateY(-10px);
+}
+
+.projects-item p{
+    display: none;
+}
+.projects-item a{
+    display: none;
+}
+.projects-item:hover p {
+    display: block;
+}
+.projects-item:hover a {
+    text-decoration: none;
+    display: block;
+    margin-left: 0 .5rem;
+    font-size: 1rem;
+    color: #2c2c6c;
+    cursor: pointer;
+    padding: 0.75rem 1.2rem;
+    border: 1px solid #2c2c6c;
+    border-radius: 0.4rem;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
 }
 
 .projects-item h1 {
@@ -253,37 +278,100 @@ h4 {
     margin-bottom: 1rem;
 }
 
-.projects-item p {
-    line-height: 20px;
-    font-size: .9rem;
-}
 
 
 
 /* Contact me Section */
-.form {
+.row {
     display: flex;
-    width: 80%;
-    padding: 0 2rem;
-    margin: auto;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.form-div input,
-textarea {
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: .5rem;
+/* Left Column */
+.col-left {
+    flex: 1;
+    padding: 1rem;
+    color: white;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-white {
+    color: white;
+}
+
+.f-2 {
+    font-size: 2rem;
+}
+
+.my-2 {
+    margin: 2rem 0;
+}
+
+/* Right Column */
+.col-right {
+    flex: 1;
+    padding: 1rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styling */
+form {
     width: 100%;
-    margin: 0.5rem 0rem;
-    font-size: .9rem;
-    background: transparent;
-    margin: 0.5rem 0rem;
-    padding: 0.5rem 1rem;
-    color: rgb(255, 255, 255);
+    max-width: 500px;
+}
+
+.form-div {
+    margin-bottom: 1rem;
+}
+
+.poppinss {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+
+.poppinss::placeholder {
+    color: #888;
+}
+
+textarea.poppinss {
     resize: none;
 }
 
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #da7fa8;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #c0658f;
+}
 
 
 /* Footer Section  */
